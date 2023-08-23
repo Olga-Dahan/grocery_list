@@ -1,0 +1,47 @@
+* {
+    text-align: center;
+  }
+
+  .myDiv {
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px black;
+    width: 20%;
+    margin: auto;
+    padding: 20px;
+  }
+
+  input {
+    margin-bottom: 20px;
+  }
+
+  #productList {
+    border-collapse: collapse;
+    width:50%;
+    margin: auto;
+  }
+
+  #productList td, #productList th{
+        border: 1px solid #ddd;
+        padding: 8px;
+  }
+
+  #productList tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+
+  #productList tr:hover{
+   background-color: #ddd; 
+  }
+
+  #productList th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #12c40c;
+    color: white;
+  }
+  
+  img{
+    width: 100px;
+  }
