@@ -1,5 +1,5 @@
 var groceryList = [];  
-// loadData(); 
+loadData(); 
 
 
 function loadProduct() {
@@ -17,7 +17,7 @@ function loadProduct() {
     groceryList.push(data);
 
     createTable();
-    // saveData();
+    saveData();
     
     document.getElementById("myForm").reset();
 
@@ -45,20 +45,22 @@ function createTable() {
 
 function clearTable() {
     document.getElementById("data").innerHTML = "";
-    taskList = [];
+    groceryList = [];
+    saveData();
 }
 
 function removeLast() {
     groceryList.pop();
     createTable();
+    saveData();
 }
 
-// function loadData() {
-//     groceryList = JSON.parse(localStorage.getItem("grocery"));
-//     createTable();
-// }
+function loadData() {
+    groceryList = JSON.parse(localStorage.getItem("grocery")) || [];
+    createTable();
+}
 
-// function saveData() {
-//     localStorage.setItem("grocery", JSON.stringify(groceryList));
-// }
+function saveData() {
+    localStorage.setItem("grocery", JSON.stringify(groceryList));
+}
 
